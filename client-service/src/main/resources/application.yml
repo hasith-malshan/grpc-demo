@@ -1,0 +1,18 @@
+grpc:
+  client:
+    grpc-hasith-service:
+      address : 'discovery:///grpc-server'
+      negotiationType : plaintext
+
+spring:
+  application:
+    name: grpc-client
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    client:
+      register-with-eureka : false
+      fetch-registry : true
+      service-url:
+        defaultZone : http://localhost:8761/eureka/
